@@ -12,7 +12,7 @@ Alter the code so that it is reproducible. Describe the changes you made to the 
 
 # Author: Julian Peinado
 
-```
+
 # Sampling procedure
 
 1. **Initial Infection Sampling (Simple Random Sampling):**
@@ -34,7 +34,7 @@ Setting np.random.seed(42) ensures that the random processes in the script (e.g.
 
 2. **Changing iteration from 1000 to 100:**
 Reducing the number of iterations from 1000 to 100 is sufficient for the code to demonstrate the general behavior of the model
-```
+
 
 
 ## Criteria
