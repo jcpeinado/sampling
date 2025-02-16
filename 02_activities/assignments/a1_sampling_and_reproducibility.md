@@ -10,11 +10,30 @@ Modify the number of repetitions in the simulation to 100 (from the original 100
 
 Alter the code so that it is reproducible. Describe the changes you made to the code and how they affected the reproducibility of the script file. The output does not need to match Whitby’s original blogpost/graphs, it just needs to produce the same output when run multiple times
 
-# Author: YOUR NAME
+# Author: Julian Peinado
 
 ```
-Please write your explanation here...
+# Sampling procedure
 
+1. **Initial Infection Sampling (Simple Random Sampling):**
+   - Infections are assigned randomly across the population using a **simple random sampling** approach, ensuring each individual has an equal probability of being infected.
+
+2. **Primary Tracing Sampling (Simple Random Sampling):**
+   - A subset of infected individuals is randomly selected for tracing, introducing the first level of sampling bias. This is also a form of **simple random sampling**, as the probability of being traced is uniform for all infected individuals.
+
+3. **Secondary Tracing Sampling (Purposive and Non-Probability Sampling):**
+   - Events with at least two traced cases are purposefully selected for further tracing. This introduces **purposive sampling**, as it focuses on specific events based on criteria. It also reflects **non-probability sampling**, as individuals at other events are excluded from this stage.
+
+4. **Aggregation (Convenience Sampling):**
+   - Proportions of traced and infected cases are aggregated by event type, revealing the over-representation of easier-to-trace settings (e.g., weddings). This reflects **convenience sampling**, as these settings are traced due to their accessibility and ease of follow-up.
+
+# Code Changes
+
+1. **Setting random seed (42) to assure reproducibility:**
+Setting np.random.seed(42) ensures that the random processes in the script (e.g., infection assignment and tracing) produce the same results every time the script is run. This guarantees reproducibility, making the output consistent across multiple runs.
+
+2. **Changing iteration from 1000 to 100:**
+Reducing the number of iterations from 1000 to 100 is sufficient for the code to demonstrate the general behavior of the model
 ```
 
 
