@@ -13,7 +13,7 @@ Alter the code so that it is reproducible. Describe the changes you made to the 
 # Author: Julian Peinado
 
 
-# Sampling procedure
+# Sampling Procedure
 
 1. **Initial Infection Sampling (Simple Random Sampling):**
    - Infections are assigned randomly across the population using a **simple random sampling** approach, ensuring each individual has an equal probability of being infected.
