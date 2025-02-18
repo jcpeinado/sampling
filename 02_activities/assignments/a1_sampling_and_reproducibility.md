@@ -35,7 +35,18 @@ Setting np.random.seed(42) ensures that the random processes in the script (e.g.
 2. **Changing iteration from 1000 to 100:**
 Reducing the number of iterations from 1000 to 100 is sufficient for the code to demonstrate the general behavior of the model
 
+# Requested Changes:
 
+1. **Sampling** occurs in four main stages:
+
+   - **Initial infection** (`np.random.choice`).
+   - **Primary tracing** (`np.random.rand(...) < TRACE_SUCCESS`).
+   - **Secondary tracing** (checking if an event has ≥ 2 traced).
+   - **Aggregation** (calculating the proportion at weddings vs. brunch).
+
+2. With **`np.random.seed(42)`**, the script’s outputs are **reproducible** across multiple runs.
+
+3. The **histograms** indeed show that weddings (or smaller, well-defined events) are **overrepresented** in the traced data relative to their true infection share, which is exactly the point of Whitby’s blog post. While the exact visuals differ slightly due to fewer runs and random variance, the **qualitative results** match the original blog post’s findings.
 
 ## Criteria
 
